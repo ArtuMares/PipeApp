@@ -1,0 +1,109 @@
+<div class="text_layout">
+    <h1>Pipes básicos</h1>
+    <p>
+        Pipes incluídos en Angular - Usualmente en el Common module.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="Uppercase"
+                [subheader]="nombreUpper">
+            {{nombreLower |uppercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Lowercase"
+                [subheader]="nombreLower">
+            {{nombreUpper |lowercase}}
+        </p-card>
+    </div>
+    <div class="col-4">
+        <p-card header="Titlecase"
+                [subheader]="nombreCompleto">
+            {{nombreCompleto |titlecase}}
+        </p-card>
+    </div>
+</div>
+
+<div class="text_layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipe para mostrar fechas.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card header="Mostrado en String">
+            <ul>
+                <li>
+                    Fecha
+                </li>
+                <li>
+                    Fecha |date
+                </li>
+                <li>
+                    fecha |date: "short"
+                </li>
+                <li>
+                    fecha |date: "long"
+                </li>
+                <li>
+                    fecha |date: "EEEE d 'of' MMMM, yyyy. 'at' h:ma"
+                </li>
+            </ul>
+            <hr>
+            <ul>
+                <li>
+                    fecha |date: "long":"GMT-9":"es-MX"
+                </li>
+                <li>
+                    fecha |date: "long":"GMT-8":"fr"
+                </li>
+                <li>
+                    fecha |date: "long":"GMT-7":"en"
+                </li>
+                <li>
+                    fecha |date: "long":"":"pt"
+                </li>
+            </ul>
+        </p-card>
+    </div>
+    <div class="col-6">
+        <p-card header="Mostrado pasando la variable por el Pipe">
+            <ul>
+                <li>
+                    {{fecha}}
+                </li>
+                <li>
+                    {{fecha |date}}
+                </li>
+                <li>
+                    {{fecha |date: "short"}}
+                </li>
+                <li>
+                    {{fecha |date: "long"}}
+                </li>
+                <li>
+                    {{fecha |date: "EEEE d 'de' MMMM, yyyy. 'a las' hh:mm a"}}
+                </li>
+            </ul>
+            <hr>
+            <ul>
+                <li>
+                    {{fecha |date: "long":"GMT-9":"es-MX"}}
+                </li>
+                <li>
+                    {{fecha |date: "long":"GMT-8":"fr"}}
+                </li>
+                <li>
+                    {{fecha |date: "long":"GMT-7":"en"}}
+                </li>
+                <li>
+                    {{fecha |date: "long":"":"pt"}}
+                </li>
+            </ul>
+        </p-card>
+    </div>
+</div>
